@@ -71,7 +71,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 canvas {
   position: fixed;
   top: 0;
