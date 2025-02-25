@@ -4,12 +4,32 @@
     <Background />
     <div class="sections">
       <TopSection />
+      <AboutFediverse />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import {onMounted} from "vue";
 import Background from './components/Background.vue';
+import AboutFediverse from "~/components/AboutFediverse.vue";
+
+onMounted(() => {
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {threshold: 0.5});
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
 </script>
 
 <style>
@@ -28,13 +48,11 @@ body {
   justify-content: center;
   min-height: 100vh;
   gap: 100vh;
-  /* セクション間の間隔（画面いっぱいのスペースを確保） */
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 80%;
   height: 100vh;
@@ -42,17 +60,21 @@ body {
   border-radius: 10px;
   color: white;
   opacity: 0;
-  /* 初期状態は非表示 */
+  transform: translateY(20px);
   transition: opacity 1s, transform 1s;
 }
 
-.section:first-child {
-  opacity: 1 !important;
-  /* フェードを無効化 */
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.section.text-center {
-  text-align: center;
+.section.center {
+  align-items: center;
+}
+
+.section.left {
+  align-items: flex-start;
 }
 
 </style>
