@@ -41,7 +41,6 @@ body {
   margin: 0 auto;
   border-radius: 10px;
   color: white;
-  text-align: center;
   opacity: 0;
   /* 初期状態は非表示 */
   transition: opacity 1s, transform 1s;
@@ -51,4 +50,9 @@ body {
   opacity: 1 !important;
   /* フェードを無効化 */
 }
+
+.section.text-center {
+  text-align: center;
+}
+
 </style>

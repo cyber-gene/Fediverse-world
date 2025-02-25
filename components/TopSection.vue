@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section text-center">
     <h1 class="typewriter">
       {{ text }}<span class="cursor">_</span>
     </h1>
