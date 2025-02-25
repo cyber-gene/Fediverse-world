@@ -10,23 +10,26 @@
 </template>
 
 <script lang="ts" setup>
-import {onMounted} from "vue";
+import { onMounted } from 'vue';
 import Background from './components/Background.vue';
-import AboutFediverse from "~/components/AboutFediverse.vue";
+import AboutFediverse from '~/components/AboutFediverse.vue';
 
 onMounted(() => {
   const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      } else {
-        entry.target.classList.remove('active');
-      }
-    });
-  }, {threshold: 0.5});
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     observer.observe(section);
   });
 });
@@ -61,7 +64,9 @@ body {
   color: white;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s, transform 1s;
+  transition:
+    opacity 1s,
+    transform 1s;
 }
 
 .section.active {
@@ -76,5 +81,4 @@ body {
 .section.left {
   align-items: flex-start;
 }
-
 </style>

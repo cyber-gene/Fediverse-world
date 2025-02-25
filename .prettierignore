@@ -1,0 +1,8 @@
+.idea
+.netlify
+.nuxt
+.output
+dist
+node_modules
+public
+server

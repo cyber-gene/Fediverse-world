@@ -1,34 +1,32 @@
 <template>
   <div class="section center">
-    <h1 class="typewriter">
-      {{ text }}<span class="cursor">_</span>
-    </h1>
+    <h1 class="typewriter">{{ text }}<span class="cursor">_</span></h1>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {onMounted, ref} from 'vue'
+import { onMounted, ref } from 'vue';
 
-const text = ref('')
-const fullText = 'Dive into the "Federated" universe!!' // 表示するテキスト
-const index = ref(0)
-const speed = 100 // タイピング速度（ミリ秒）
+const text = ref('');
+const fullText = 'Dive into the "Federated" universe!!'; // 表示するテキスト
+const index = ref(0);
+const speed = 100; // タイピング速度（ミリ秒）
 
 const typeEffect = () => {
   if (index.value < fullText.length) {
-    text.value += fullText.charAt(index.value)
-    index.value++
-    setTimeout(typeEffect, speed)
+    text.value += fullText.charAt(index.value);
+    index.value++;
+    setTimeout(typeEffect, speed);
   } else {
     // タイピングが完了したらカーソル点滅
-    const cursor = document.querySelector('.cursor')
-    if (cursor) cursor.classList.add('blink')
+    const cursor = document.querySelector('.cursor');
+    if (cursor) cursor.classList.add('blink');
   }
-}
+};
 
 onMounted(() => {
-  typeEffect()
-})
+  typeEffect();
+});
 </script>
 
 <style scoped>
