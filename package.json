@@ -13,6 +13,8 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "nuxt": "^3.15.4",
     "nuxt-mdi": "^2.1.1",
+    "prettier": "^3.5.2",
+    "save-dev": "^0.0.1-security",
     "vue": "latest",
     "vue-router": "latest"
   }
