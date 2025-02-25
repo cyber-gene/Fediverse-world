@@ -38,7 +38,8 @@ onMounted(() => {
   font-weight: 500;
   color: white;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
   overflow: hidden;
 }
 

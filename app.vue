@@ -33,10 +33,12 @@ body {
 
 .section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   height: 100vh;
+  margin: 0 auto;
   border-radius: 10px;
   color: white;
   text-align: center;
