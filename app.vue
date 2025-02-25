@@ -2,7 +2,7 @@
   <div>
     <NuxtRouteAnnouncer />
     <Background />
-    <div class="secions">
+    <div class="sections">
       <TopSection />
     </div>
   </div>
