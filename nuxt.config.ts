@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     preset: 'netlify'
   },
 
-  modules: ['@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/google-fonts', 'nuxt-mdi'],
 
   googleFonts: {
     families: {
