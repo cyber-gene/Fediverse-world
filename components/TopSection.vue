@@ -1,5 +1,5 @@
 <template>
-  <div class="section text-center">
+  <div class="section center">
     <h1 class="typewriter">
       {{ text }}<span class="cursor">_</span>
     </h1>
@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import {onMounted, ref} from 'vue'
 
 const text = ref('')
 const fullText = 'Dive into the "Federated" universe!!' // 表示するテキスト
