@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   nitro: {
-    preset: 'netlify'
+    preset: 'netlify',
   },
 
   modules: ['@nuxtjs/google-fonts', 'nuxt-mdi'],
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'Noto+Sans': true,
-      'JetBrains+Mono': true
-    }
-  }
-})
+      'JetBrains+Mono': true,
+    },
+  },
+});
